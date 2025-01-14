@@ -25,6 +25,8 @@ export default {
       };
       // 从请求 URL 中获取路径名。
       const { pathname } = new URL(request.url);
+      console.log("request pathname:", pathname);
+      console.log("request method:", request.method);
       // 根据路径名选择不同的处理函数。
       switch (true) {
         case pathname.endsWith("/chat/completions"):
