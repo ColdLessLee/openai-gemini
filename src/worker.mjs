@@ -26,7 +26,6 @@ export default {
       // 从请求 URL 中获取路径名。
       const { pathname } = new URL(request.url);
       console.log("request pathname:", pathname);
-      console.log("request method:", request.method);
       // 根据路径名选择不同的处理函数。
       switch (true) {
         case pathname.endsWith("/chat/completions"):
@@ -187,6 +186,7 @@ async function handleCompletions (req, apiKey) {
     case req.model.startsWith("learnlm-"):
       model = req.model;
   }
+  console.log("current using model name:", model);
   // 根据请求是否为流式请求选择不同的任务类型。
   const TASK = req.stream ? "streamGenerateContent" : "generateContent";
   // 构建请求 URL。
