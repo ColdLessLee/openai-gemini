@@ -82,8 +82,8 @@ const handleOPTIONS = async () => {
 };
 
 // 定义 Google API 的基础 URL。
-// const BASE_URL = "https://generativelanguage.googleapis.com";
-const BASE_URL = "https://proxygemini.cleessr.com"
+const BASE_URL = "https://generativelanguage.googleapis.com";
+// const BASE_URL = "https://proxygemini.cleessr.com"
 // 定义 Google API 的版本号。
 const API_VERSION = "v1beta";
 
